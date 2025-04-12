@@ -32,4 +32,4 @@ jobs:
                 server: ftp.growinvoice.com
                 username: u644247801.githubtestreactapp
                 password: "Growinvoice@2025"
-                local-dir: build
+                local-dir: ./build/
