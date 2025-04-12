@@ -1,0 +1,27 @@
+on:
+    push:
+        branches:
+            - main
+
+name: Deployment of test app to hostinger
+
+jobs:
+    web-deploy:
+        name: Deploy to Hostinger
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: '18' # Specify the Node.js version you want to use
+
+            - name: running install command
+              run: |
+                    npm install
+            
+            - name: running build command
+              run: |
+                    npm run build
