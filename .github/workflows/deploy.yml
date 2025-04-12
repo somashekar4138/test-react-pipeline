@@ -31,5 +31,5 @@ jobs:
               with:
                 server: ftp.growinvoice.com
                 username: u644247801.githubtestreactapp
-                password: "Growinvoice@2025"
+                password: ${{ secrets.FTP_PASSWORD }}
                 local-dir: ./build/
