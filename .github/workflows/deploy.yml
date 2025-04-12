@@ -25,3 +25,11 @@ jobs:
             - name: running build command
               run: |
                     npm run build
+
+            - name: 📂 Sync files
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+              with:
+                server: ftp.growinvoice.com
+                username: u644247801.githubtestreactapp
+                password: "Growinvoice@2025"
+                local-dir: build
